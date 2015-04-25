@@ -1,0 +1,29 @@
+.navbar-inverse{
+  //border-bottom: none;
+  .navbar-nav{
+    & >.active{
+      & >a{
+        background-color: #000;
+        border-bottom: 5px solid @color-lr-green;
+        &:hover{
+          background-color: #000;
+        }
+      }
+    }
+    & >li{
+      & >a{
+        border-bottom: 5px solid #000;
+        text-transform: uppercase !important;
+        border-bottom: 5px solid #000;
+        padding-bottom: 9px;
+        font-size: 13px;
+        margin-left: 1px;
+        margin-right: 1px;
+        &:hover{
+          background-color: #000;
+          border-bottom: 5px solid @color-lr-green;
+        }
+      }
+    }
+  }
+}
