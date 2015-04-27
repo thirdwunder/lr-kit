@@ -18,16 +18,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php _e('Vacation Ideas','tw');?> <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-
-          </ul>
+        <li>
+          <a href="#" data-toggle="modal" data-target="#subMenuWrapper" role="button" aria-expanded="false"><?php _e('Vacation Ideas','tw');?> <span class="caret"></span></a>
         </li>
 
         <li><a href="<?php echo lr_get_magazine_url(); ?>" title="<?php _e('Luxury Retreats Magazine','tw');?>" target="_blank"><?php _e('Magazine','tw'); ?></a></li>
@@ -48,12 +40,12 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div id="subMenuWrapper" class="subMenuWrapper">
-  <div class="vacationIdeaWrapper" id="vacationIdeaWrapper">
+<div id="subMenuWrapper" class="subMenuWrapper modal hidden-xs">
+  <div id="vacationIdeaWrapper" class="vacationIdeaWrapper" >
     <div class="container">
       <h3 class="headerDdTitle ideaTitle"><?php _e('Get Insprired','tw'); ?></h3>
       <div class="row">
-        <div class="col-md-8 ideaLeft">
+        <div class="hidden-xs col-sm-8 col-md-8 ideaLeft">
           <h4 class="ideaSubtitle"><?php _e('Browse Our Top Villa Collections:','tw');?></h4>
 
           <div class="row">
@@ -106,7 +98,7 @@
           </div><!-- row -->
 
         </div><!-- ideaLeft -->
-        <div class="col-md-4 ideaRight">
+        <div class="hidden-xs col-sm-4 col-md-4 ideaRight">
           <h4 class="ideaSubtitle"><?php _e('Explore Our Top Destinations:','tw');?></h4>
           <ul id="ideaList" class="ideaList">
               <li><a href="<?php echo lr_get_base_url(); ?>destinations/caribbean/st-barts/" title="St. Barts, Caribbean" data-region="3">St. Barts, Caribbean</a></li>
@@ -121,6 +113,6 @@
         </div><!-- ideaRight -->
       </div>
     </div>
-    <div id="xIdea" class="headerCloser"><i class="fa fa-times"></i></div>
+    <div id="xIdea" class="headerCloser" data-dismiss="modal"><i class="fa fa-times"></i></div>
   </div>
 </div>

@@ -1,3 +1,5 @@
+
+
 .navbar-inverse{
   //border-bottom: none;
   padding: 10px 0 0 0;
@@ -39,6 +41,7 @@
         font-size: 13px;
         margin-left: 1px;
         margin-right: 1px;
+        &:focus,
         &:hover{
           background-color: #000;
           border-bottom: 5px solid @color-lr-green;
@@ -72,6 +75,7 @@
 
 
 #subMenuWrapper{
+  position: relative;
   #vacationIdeaWrapper{
     //position: absolute;
     //top: 0;
@@ -86,7 +90,7 @@
     box-shadow: 0 0 20px #444;
     z-index: 2;
     //max-height: 235px;
-    //overflow-y: scroll;
+    overflow-y: scroll;
     position: relative;
 
     .container{
