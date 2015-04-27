@@ -1,4 +1,4 @@
-<?php
+return<?php
 if(!function_exists('tw_slugify')){
   function tw_slugify($text){
     $text = preg_replace('~[^\\pL\d]+~u', '-', $text); // replace non letter or digits by -
@@ -15,13 +15,13 @@ if(!function_exists('tw_slugify')){
 
 if(!function_exists('lr_get_base_url')){
   function lr_get_base_url(){
-    echo 'http://www2.luxuryretreats.com/';
+    return 'http://www2.luxuryretreats.com/';
   }
 }
 
 if(!function_exists('lr_get_magazine_url')){
   function lr_get_magazine_url(){
-    echo 'http://magazine.luxuryretreats.com/';
+    return 'http://magazine.luxuryretreats.com/';
   }
 }
 
