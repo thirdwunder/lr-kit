@@ -13,8 +13,12 @@ if(!function_exists('tw_slugify')){
   }
 }
 
-function get_lr_social(){
-  return array(
+function lr_get_base_url(){
+  return 'http://www2.luxuryretreats.com/';
+}
+
+function lr_get_social(){
+  $social = array(
     "facebook"    => array( 'url'=>"https://www.facebook.com/luxuryretreats", 'icon'=>'fa-facebook'),
     "twitter"     => array( 'url'=>"https://twitter.com/luxuryretreats", 'icon'=>'fa-twitter'),
     "pinterest"   => array( 'url'=>"http://pinterest.com/luxuryretreats", 'icon'=>'fa-pinterest'),
@@ -22,477 +26,493 @@ function get_lr_social(){
     "linkedin"    => array( 'url'=>"http://www.linkedin.com/company/luxury-retreats", 'icon'=>'fa-linkedin'),
     "instagram"   => array( 'url'=>"http://instagram.com/luxuryretreats", 'icon'=>'fa-instagram'),
   );
+  $social_info = array();
+  if(function_exists('tw_get_theme_social_options')){
+    $square_social_icons = false;
+    $social_info   = tw_get_theme_social_options($square_social_icons);
+    unset($social_info['rss']);
+    $temp = array();
+    foreach($social as $k=>$v){
+      $temp[$k] = $social_info[$k];
+    }
+    $social_info = $temp;
+  }else{
+    $social_info = $social;
+  }
+
+  return $social_info;
+
 }
 
-function get_lr_destinations(){
+function lr_get_destinations(){
   $destinations = array(
     'Austria'=> array(
                         'name'=>'Austria',
-                        'url'=>'/destinations/europe/austria/',
+                        'url'=>lr_get_base_url().'destinations/europe/austria/',
                         'destinations'=> array(
                           array(
                                 'name'=>'Austrian Alps',
-                                'url'=> '/destinations/europe/austria/austrian-alps/',
+                                'url'=> lr_get_base_url().'destinations/europe/austria/austrian-alps/',
                                 ),
                         ),
                       ),
     'Caribbean'=> array(
                         'name'=>'Caribbean',
-                        'url'=>'/destinations/caribbean/',
+                        'url'=>lr_get_base_url().'destinations/caribbean/',
                         'destinations'=> array(
                           array(
                                 'name'=>'Anguilla',
-                                'url'=> '/destinations/caribbean/anguilla/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/anguilla/',
                                 ),
                           array(
                                 'name'=>'Bahamas',
-                                'url'=> '/destinations/caribbean/bahamas',
+                                'url'=> lr_get_base_url().'destinations/caribbean/bahamas',
                                 ),
                           array(
                                 'name'=>'Bahamas',
-                                'url'=> '/destinations/caribbean/bahamas/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/bahamas/',
                                 ),
                           array(
                                 'name'=>'Barbados',
-                                'url'=> '/destinations/caribbean/barbados/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/barbados/',
                                 ),
                           array(
                                 'name'=>'Bonaire',
-                                'url'=> '/destinations/caribbean/bonaire/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/bonaire/',
                                 ),
                           array(
                                 'name'=>'Dominican Republic',
-                                'url'=> '/destinations/caribbean/dominican-republic/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/dominican-republic/',
                                 ),
                           array(
                                 'name'=>'Grenada',
-                                'url'=> '/destinations/caribbean/grenada/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/grenada/',
                                 ),
                           array(
                                 'name'=>'Jamaica',
-                                'url'=> '/destinations/caribbean/jamaica/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/jamaica/',
                                 ),
                           array(
                                 'name'=>'Puerto Rico',
-                                'url'=> '/destinations/caribbean/puerto-rico/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/puerto-rico/',
                                 ),
                           array(
                                 'name'=>'St. Barts',
-                                'url'=> '/destinations/caribbean/st-barts/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/st-barts/',
                                 ),
                           array(
                                 'name'=>'St. Croix',
-                                'url'=> '/destinations/caribbean/st-croix/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/st-croix/',
                                 ),
                           array(
                                 'name'=>'St. John',
-                                'url'=> '/destinations/caribbean/st-john/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/st-john/',
                                 ),
                           array(
                                 'name'=>'St. Lucia',
-                                'url'=> '/destinations/caribbean/st-lucia/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/st-lucia/',
                                 ),
                           array(
                                 'name'=>'St. Martin',
-                                'url'=> '/destinations/caribbean/st-martin/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/st-martin/',
                                 ),
                           array(
                                 'name'=>'St. Thomas',
-                                'url'=> '/destinations/caribbean/st-thomas/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/st-thomas/',
                                 ),
                           array(
                                 'name'=>'Tortola',
-                                'url'=> '/destinations/caribbean/tortola/',
+                                'url'=> lr_get_base_url().'destinations/caribbean/tortola/',
                                 ),
                           array(
                             'name'=>'Turks and Caicos',
-                            'url'=>'/destinations/caribbean/turks-and-caicos/',
+                            'url'=>lr_get_base_url().'destinations/caribbean/turks-and-caicos/',
                           ),
                           array(
                             'name'=>'Virgin Gorda',
-                            'url'=>'/destinations/caribbean/virgin-gorda/',
+                            'url'=>lr_get_base_url().'destinations/caribbean/virgin-gorda/',
                           ),
                         ),
                       ),
     'Canada'=>array(
                     'name'=>'Canada',
-                    'url'=>'/destinations/north-america/canada/',
+                    'url'=>lr_get_base_url().'destinations/north-america/canada/',
                     'destinations'=>array(
                       array(
                         'name'=>'Mont Tremblant',
-                        'url'=>'/destinations/north-america/canada/mont-tremblant/',
+                        'url'=>lr_get_base_url().'destinations/north-america/canada/mont-tremblant/',
                       ),
                       array(
                         'name'=>'Whistler (BC)',
-                        'url'=>'/destinations/north-america/canada/bc/whistler/',
+                        'url'=>lr_get_base_url().'destinations/north-america/canada/bc/whistler/',
                       ),
                     ),
                   ),
     'Central America'=>array(
                         'name'=>'Central America',
-                        'url'=>'/destinations/central-america/',
+                        'url'=>lr_get_base_url().'destinations/central-america/',
                         'destinations'=>array(
                           array(
                             'name'=>'Belize',
-                            'url'=>'/destinations/central-america/belize/',
+                            'url'=>lr_get_base_url().'destinations/central-america/belize/',
                           ),
                           array(
                             'name'=>'Costa Rica',
-                            'url'=>'/destinations/central-america/costa-rica/',
+                            'url'=>lr_get_base_url().'destinations/central-america/costa-rica/',
                           ),
                         ),
                       ),
     'Croatia'=>array(
                       'name'=>'Croatia',
-                      'url'=>'/destinations/europe/croatia/',
+                      'url'=>lr_get_base_url().'destinations/europe/croatia/',
                       'destinations'=>array(
                         array(
                           'name'=>'Dubrovnik Riviera',
-                          'url'=>'/destinations/europe/croatia/dubrovnik-riviera/',
+                          'url'=>lr_get_base_url().'destinations/europe/croatia/dubrovnik-riviera/',
                         ),
                         array(
                           'name'=>'Hvar',
-                          'url'=>'/destinations/europe/croatia/hvar/',
+                          'url'=>lr_get_base_url().'destinations/europe/croatia/hvar/',
                         ),
                         //array(
                         //  'name'=>'Korcula',
-                        //  'url'=>'/destinations/europe/croatia/korcula/',
+                        //  'url'=>lr_get_base_url().'destinations/europe/croatia/korcula/',
                         //),
                         array(
                           'name'=>'Pelijesac Peninsula',
-                          'url'=>'/destinations/europe/croatia/pelijesac-peninsula/',
+                          'url'=>lr_get_base_url().'destinations/europe/croatia/pelijesac-peninsula/',
                         ),
                         array(
                           'name'=>'Split Riviera',
-                          'url'=>'/destinations/europe/croatia/split-riviera/',
+                          'url'=>lr_get_base_url().'destinations/europe/croatia/split-riviera/',
                         ),
                       ),
                     ),
     'France'=>array(
                       'name'=>'France',
-                      'url'=>'/destinations/europe/france/',
+                      'url'=>lr_get_base_url().'destinations/europe/france/',
                       'destinations'=>array(
                         array(
                           'name'=>'Corsica',
-                          'url'=>'/destinations/europe/france/corsica/',
+                          'url'=>lr_get_base_url().'destinations/europe/france/corsica/',
                         ),
                         array(
                           'name'=>'French Alps',
-                          'url'=>'/destinations/europe/france/french-alps/',
+                          'url'=>lr_get_base_url().'destinations/europe/france/french-alps/',
                         ),
                         array(
                           'name'=>'French Riviera',
-                          'url'=>'/destinations/europe/france/french-riviera/',
+                          'url'=>lr_get_base_url().'destinations/europe/france/french-riviera/',
                         ),
                         array(
                           'name'=>'Paris',
-                          'url'=>'/destinations/europe/france/paris/',
+                          'url'=>lr_get_base_url().'destinations/europe/france/paris/',
                         ),
                         array(
                           'name'=>'Provence',
-                          'url'=>'/destinations/europe/france/provence/',
+                          'url'=>lr_get_base_url().'destinations/europe/france/provence/',
                         ),
                       ),
                     ),
     'Greece'=>array(
                    'name'=>'Greece',
-                   'url'=>'/destinations/europe/greece/',
+                   'url'=>lr_get_base_url().'destinations/europe/greece/',
                     'destinations'=>array(
                       array(
                         'name' => 'Crete',
-                        'url' => '/destinations/europe/greece/crete/',
+                        'url'=> lr_get_base_url().'destinations/europe/greece/crete/',
                       ),
                       array(
                         'name' => 'Mykonos',
-                        'url' => '/destinations/europe/greece/mykonos/',
+                        'url'=> lr_get_base_url().'destinations/europe/greece/mykonos/',
                       ),
                       array(
                         'name' => 'Paros',
-                        'url' => '/destinations/europe/greece/paros/',
+                        'url'=> lr_get_base_url().'destinations/europe/greece/paros/',
                       ),
                       array(
                         'name' => 'Santorini',
-                        'url' => '/destinations/europe/greece/santorini/',
+                        'url'=> lr_get_base_url().'destinations/europe/greece/santorini/',
                       ),
                       array(
                         'name' => 'Zakynthos',
-                        'url' => '/destinations/europe/greece/zakynthos/',
+                        'url'=> lr_get_base_url().'destinations/europe/greece/zakynthos/',
                       ),
                     ),
                   ),
     'Hawaii'=>array(
                     'name'=>'Hawaii',
-                    'url'=>'/destinations/north-america/hawaii/',
+                    'url'=>lr_get_base_url().'destinations/north-america/hawaii/',
                     'destinations'=>array(
                       array(
                         'name'=>'Big Island',
-                        'url'=>'/destinations/north-america/hawaii/big-island/',
+                        'url'=>lr_get_base_url().'destinations/north-america/hawaii/big-island/',
                       ),
                       array(
                         'name'=>'Kauai',
-                        'url'=>'/destinations/north-america/hawaii/kauai/',
+                        'url'=>lr_get_base_url().'destinations/north-america/hawaii/kauai/',
                       ),
                       array(
                         'name'=>'Maui',
-                        'url'=>'/destinations/north-america/hawaii/maui/',
+                        'url'=>lr_get_base_url().'destinations/north-america/hawaii/maui/',
                       ),
                       array(
                         'name'=>'Oahu',
-                        'url'=>'/destinations/north-america/hawaii/oahu/',
+                        'url'=>lr_get_base_url().'destinations/north-america/hawaii/oahu/',
                       ),
                     ),
                   ),
     'Indian Ocean'=>array(
                     'name'=>'Indian Ocean',
-                    'url'=>'/destinations/africa/indian-ocean/',
+                    'url'=>lr_get_base_url().'destinations/africa/indian-ocean/',
                     'destinations'=>array(
                       array(
                         'name'=>'Mauritius',
-                        'url'=>'/destinations/africa/indian-ocean/mauritius/',
+                        'url'=>lr_get_base_url().'destinations/africa/indian-ocean/mauritius/',
                       ),
                     ),
                   ),
     'Indonesia'=>array(
                     'name'=>'Indonesia',
-                    'url'=>'/destinations/asia/indonesia/',
+                    'url'=>lr_get_base_url().'destinations/asia/indonesia/',
                     'destinations'=>array(
                       array(
                         'name'=>'Bali',
-                        'url'=>'/destinations/asia/indonesia/bali/',
+                        'url'=>lr_get_base_url().'destinations/asia/indonesia/bali/',
                       ),
                       array(
                         'name'=>'Lombok',
-                        'url'=>'/destinations/asia/indonesia/lombok/',
+                        'url'=>lr_get_base_url().'destinations/asia/indonesia/lombok/',
                       ),
                     ),
                   ),
     'Italy'=>array(
                     'name'=>'Italy',
-                    'url'=>'/destinations/europe/italy/',
+                    'url'=>lr_get_base_url().'destinations/europe/italy/',
                     'destinations'=>array(
                       array(
                         'name'=>'Amalfi Coast',
-                        'url'=>'/destinations/europe/italy/amalfi-coast/',
+                        'url'=>lr_get_base_url().'destinations/europe/italy/amalfi-coast/',
                       ),
                       array(
                         'name'=>'Lake Como',
-                        'url'=>'/destinations/europe/italy/lake-como/',
+                        'url'=>lr_get_base_url().'destinations/europe/italy/lake-como/',
                       ),
                       array(
                         'name'=>'Puglia',
-                        'url'=>'/destinations/europe/italy/puglia/',
+                        'url'=>lr_get_base_url().'destinations/europe/italy/puglia/',
                       ),
                       array(
                         'name'=>'Sardinia',
-                        'url'=>'/destinations/europe/italy/sardinia/',
+                        'url'=>lr_get_base_url().'destinations/europe/italy/sardinia/',
                       ),
                       array(
                         'name'=>'Sicily',
-                        'url'=>'/destinations/europe/italy/sicily/',
+                        'url'=>lr_get_base_url().'destinations/europe/italy/sicily/',
                       ),
                       array(
                         'name'=>'Tuscany',
-                        'url'=>'/destinations/europe/italy/tuscany/',
+                        'url'=>lr_get_base_url().'destinations/europe/italy/tuscany/',
                       ),
                       array(
                         'name'=>'Umbria',
-                        'url'=>'/destinations/europe/italy/umbria/',
+                        'url'=>lr_get_base_url().'destinations/europe/italy/umbria/',
                       ),
                     ),
                 ),
     'Mexico'=>array(
                     'name'=>'Mexico',
-                    'url'=>'/destinations/north-america/mexico/',
+                    'url'=>lr_get_base_url().'destinations/north-america/mexico/',
                     'destinations'=>array(
                       array(
                         'name'=>'Cabo San Lucas',
-                        'url'=>'/destinations/north-america/mexico/cabo-san-lucas/',
+                        'url'=>lr_get_base_url().'destinations/north-america/mexico/cabo-san-lucas/',
                       ),
                       array(
                         'name'=>'Puerto Vallarta',
-                        'url'=>'/destinations/north-america/mexico/puerto-vallarta/',
+                        'url'=>lr_get_base_url().'destinations/north-america/mexico/puerto-vallarta/',
                       ),
                       array(
                         'name'=>'Punta Mita',
-                        'url'=>'/destinations/north-america/mexico/punta-mita/',
+                        'url'=>lr_get_base_url().'destinations/north-america/mexico/punta-mita/',
                       ),
                       array(
                         'name'=>'Riviera Maya',
-                        'url'=>'/destinations/north-america/mexico/riviera-maya/',
+                        'url'=>lr_get_base_url().'destinations/north-america/mexico/riviera-maya/',
                       ),
                     ),
                 ),
     'Portugal'=>array(
                     'name'=>'Portugal',
-                    'url'=>'/destinations/europe/portugal/',
+                    'url'=>lr_get_base_url().'destinations/europe/portugal/',
                     'destinations'=>array(
                       array(
                         'name'=>'Algarve',
-                        'url'=>'/destinations/europe/portugal/algarve/',
+                        'url'=>lr_get_base_url().'destinations/europe/portugal/algarve/',
                       ),
                       array(
                         'name'=>'Lisbon Area',
-                        'url'=>'/destinations/europe/portugal/lisbon-area/',
+                        'url'=>lr_get_base_url().'destinations/europe/portugal/lisbon-area/',
                       ),
                       array(
                         'name'=>'Northern Portugal',
-                        'url'=>'/destinations/europe/portugal/northern-portugal/',
+                        'url'=>lr_get_base_url().'destinations/europe/portugal/northern-portugal/',
                       ),
                     ),
                   ),
     'South Africa'=>array(
                     'name'=>'South Africa',
-                    'url'=>'/destinations/africa/south-africa/',
+                    'url'=>lr_get_base_url().'destinations/africa/south-africa/',
                     'destinations'=>array(
                       array(
                         'name'=>'Cape Town',
-                        'url'=>'/destinations/africa/south-africa/cape-town/',
+                        'url'=>lr_get_base_url().'destinations/africa/south-africa/cape-town/',
                       ),
                       array(
                         'name'=>'Madikwe Game Reserve',
-                        'url'=>'/destinations/africa/south-africa/madikwe-game-reserve/',
+                        'url'=>lr_get_base_url().'destinations/africa/south-africa/madikwe-game-reserve/',
                       ),
                     ),
                   ),
     'Spain'=>array(
                     'name'=>'Spain',
-                    'url'=>'/destinations/europe/spain/',
+                    'url'=>lr_get_base_url().'destinations/europe/spain/',
                     'destinations'=>array(
                       array(
                         'name'=>'Andalucia',
-                        'url'=>'/destinations/europe/spain/andalucia/',
+                        'url'=>lr_get_base_url().'destinations/europe/spain/andalucia/',
                       ),
                       array(
                         'name'=>'Barcelona',
-                        'url'=>'/destinations/europe/spain/barcelona/',
+                        'url'=>lr_get_base_url().'destinations/europe/spain/barcelona/',
                       ),
                       array(
                         'name'=>'Costa Brava',
-                        'url'=>'/destinations/europe/spain/costa-brava/',
+                        'url'=>lr_get_base_url().'destinations/europe/spain/costa-brava/',
                       ),
                       array(
                         'name'=>'Costa del Sol',
-                        'url'=>'/destinations/europe/spain/costa-del-sol/',
+                        'url'=>lr_get_base_url().'destinations/europe/spain/costa-del-sol/',
                       ),
                       array(
                         'name'=>'Ibiza',
-                        'url'=>'/destinations/europe/spain/ibiza/',
+                        'url'=>lr_get_base_url().'destinations/europe/spain/ibiza/',
                       ),
                       array(
                         'name'=>'Mallorca',
-                        'url'=>'/destinations/europe/spain/mallorca/',
+                        'url'=>lr_get_base_url().'destinations/europe/spain/mallorca/',
                       ),
                     ),
                   ),
     'Switzerland'=>array(
                     'name'=>'Switzerland',
-                    'url'=>'/destinations/europe/switzerland/',
+                    'url'=>lr_get_base_url().'destinations/europe/switzerland/',
                     'destinations'=>array(
                       array(
                         'name'=>'Swiss Alps',
-                        'url'=>'/destinations/europe/switzerland/swiss-alps/',
+                        'url'=>lr_get_base_url().'destinations/europe/switzerland/swiss-alps/',
                       ),
                     ),
                   ),
     'Thailand'=>array(
                     'name'=>'Thailand',
-                    'url'=>'/destinations/asia/thailand/',
+                    'url'=>lr_get_base_url().'destinations/asia/thailand/',
                     'destinations'=>array(
                       array(
                         'name'=>'Koh Samui',
-                        'url'=>'/destinations/asia/thailand/koh-samui/',
+                        'url'=>lr_get_base_url().'destinations/asia/thailand/koh-samui/',
                       ),
                       array(
                         'name'=>'Phuket',
-                        'url'=>'/destinations/asia/thailand/phuket/',
+                        'url'=>lr_get_base_url().'destinations/asia/thailand/phuket/',
                       ),
                     ),
                   ),
     'United States'=>array(
                     'name'=>'United States',
-                    'url'=>'/destinations/north-america/united-states/',
+                    'url'=>lr_get_base_url().'destinations/north-america/united-states/',
                     'destinations'=>array(
                       array(
                         'name'=>'California',
-                        'url'=>'/search?RegionIds=1%7C1%7C109%2C1%7C1%7C238%2C1%7C1%7C240%2C1%7C1%7C237%2C1%7C1%7C239%2C1%7C1%7C245',
+                        'url'=>lr_get_base_url().'search?RegionIds=1%7C1%7C109%2C1%7C1%7C238%2C1%7C1%7C240%2C1%7C1%7C237%2C1%7C1%7C239%2C1%7C1%7C245',
                         'destinations'=>array(
                           array(
                             'name'=>'Desert Cities',
-                            'url'=>'/destinations/north-america/united-states/california---desert-cities/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/california---desert-cities/',
                           ),
                           array(
                             'name'=>'Lake Tahoe',
-                            'url'=>'/destinations/north-america/united-states/california---lake-tahoe/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/california---lake-tahoe/',
                           ),
                           array(
                             'name'=>'Los Angeles',
-                            'url'=>'/destinations/north-america/united-states/california---los-angeles/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/california---los-angeles/',
                           ),
                           array(
                             'name'=>'Napa and Sonoma',
-                            'url'=>'/destinations/north-america/united-states/california---napa---sonoma/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/california---napa---sonoma/',
                           ),
                           array(
                             'name'=>'San Diego',
-                            'url'=>'/destinations/north-america/united-states/california---san-diego/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/california---san-diego/',
                           ),
                         ),
                       ),
                       array(
                         'name'=>'Colorado',
-                        'url'=>'/search?RegionIds=1%7C1%7C244%2C1%7C1%7C245%2C1%7C1%7C246%2C1%7C1%7C247',
+                        'url'=>lr_get_base_url().'search?RegionIds=1%7C1%7C244%2C1%7C1%7C245%2C1%7C1%7C246%2C1%7C1%7C247',
                         'destinations'=>array(
                           array(
                             'name'=>'Breckenridge',
-                            'url'=>'/destinations/north-america/united-states/colorado-breckenridge/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/colorado-breckenridge/',
                           ),
                           array(
                             'name'=>'Greater Aspen',
-                            'url'=>'/destinations/north-america/united-states/colorado---greater-aspen/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/colorado---greater-aspen/',
                           ),
                           array(
                             'name'=>'Telluride',
-                            'url'=>'/destinations/north-america/united-states/colorado-telluride/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/colorado-telluride/',
                           ),
                           array(
                             'name'=>'Vail Valley',
-                            'url'=>'/destinations/north-america/united-states/colorado-vail-valley/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/colorado-vail-valley/',
                           ),
                         ),
                       ),
                       array(
                         'name'=>'Florida',
-                        'url'=>'/search?RegionIds=1%7C1%7C252%2C1%7C1%7C254%2C1%7C1%7C253%2C1%7C1%7C251',
+                        'url'=>lr_get_base_url().'search?RegionIds=1%7C1%7C252%2C1%7C1%7C254%2C1%7C1%7C253%2C1%7C1%7C251',
                         'destinations'=>array(
                           array(
                             'name'=>'Fort Lauderdale',
-                            'url'=>'/destinations/north-america/united-states/florida---fort-lauderdale/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/florida---fort-lauderdale/',
                           ),
                           array(
                             'name'=>'Gulf Coast',
-                            'url'=>'/destinations/north-america/united-states/florida---gulf-coast/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/florida---gulf-coast/',
                           ),
                           array(
                             'name'=>'Miami',
-                            'url'=>'/destinations/north-america/united-states/florida---miami/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/florida---miami/',
                           ),
                           array(
                             'name'=>'The Palm Beaches',
-                            'url'=>'/destinations/north-america/united-states/florida---the-palm-beaches/',
+                            'url'=>lr_get_base_url().'destinations/north-america/united-states/florida---the-palm-beaches/',
                           ),
                         ),
                       ),
                       array(
                         'name'=>'New York',
-                        'url'=>'/destinations/north-america/united-states/new-york/',
+                        'url'=>lr_get_base_url().'destinations/north-america/united-states/new-york/',
                       ),
                       array(
                         'name'=>'Utah',
-                        'url'=>'/destinations/north-america/united-states/utah/',
+                        'url'=>lr_get_base_url().'destinations/north-america/united-states/utah/',
                       ),
                       array(
                         'name'=>'Wyoming',
-                        'url'=>'/destinations/north-america/united-states/wyoming/',
+                        'url'=>lr_get_base_url().'destinations/north-america/united-states/wyoming/',
                       ),
                     ),
                   ),
@@ -500,8 +520,7 @@ function get_lr_destinations(){
   return $destinations;
 }
 
-
-function get_lr_regions(){
+function lr_get_regions(){
 	$africa = array(
     'id'=> 4,
     'name' =>'Africa',
@@ -1446,4 +1465,48 @@ $north_america = array(
     tw_slugify('north-america') => $north_america,
   );
   return $regions;
+}
+
+function lr_update_region($r_id, $r_name, $r_slug, $r_level, $parent_id=0){
+    $taxonomy = 'lr_property_region';
+    $parent=null;
+
+    if($parent_id!==0){
+      $parent = get_term_by('id', $parent_id, $taxonomy);
+      if(is_wp_error($parent)){
+        error_log($parent->get_error_message());
+        $parent=null;
+      }
+    }
+
+    if($r_id && $r_name && $r_slug && $r_level){
+      //find term by slug
+      $region = get_term_by('slug', $r_slug, $taxonomy);
+      if(!$region){
+        $region = wp_insert_term(
+                  $r_name, // the term
+                  $taxonomy, // the taxonomy
+                  array(
+                    //'description'=> 'A yummy apple.',
+                    'slug' => $r_slug,
+                    'parent'=> $parent->term_id,
+                  )
+                );
+        if(is_wp_error($region)){
+          error_log($region->get_error_message());
+        }else{
+          $region_term_id = $region['term_id'];
+        }
+      }else{
+        $region_term_id = $region->term_id;
+      }
+
+
+      if(!$region_meta = get_option('tax_meta_'.$region_term_id)){
+        $region_meta = update_option('tax_meta_'.$region_term_id, array('lr_property_region_id'=>$r_id,'lr_property_region_level'=>$r_level ));
+      }
+      return $region_term_id;
+    }else{
+      return 'error';
+    }
 }

@@ -1,14 +1,14 @@
 <div class="row">
-  <div id="copyright" class="col-xs-12 col-sm-8 col-md-8">
-    <h3><?php _e('More from Luxury Retreats','tw'); ?></h3>
+  <div id="copyright" class="col-xs-12 col-sm-12 col-md-8">
+    <h3 class="hidden-xs hidden-sm visible-md-*"><?php _e('More from Luxury Retreats','tw'); ?></h3>
 
       <ul id="footerLinks">
-        <li><a href="javascript:;" id="showDestinations" data-name="Our Destinations" title="Our Destinations"><?php _e('Our Destinations','tw');?></a></li>
-        <li><a href="http://www2.luxuryretreats.com/content/about" data-name="About"><?php _e('About Us','tw');?></a></li>
-        <li><a href="http://www2.luxuryretreats.com/tabletapp" data-name="Our App" title="Our App"><?php _e('App Store','tw');?></a></li>
-        <li><a href="http://www2.luxuryretreats.com/Content/Press/" data-name="Press" title="Press"><?php _e('Press','tw');?></a></li>
-        <li><a href="http://www2.luxuryretreats.com/careers/" data-name="Careers" title="Careers"><?php _e('Careers','tw');?></a></li>
-        <li><a href="http://www2.luxuryretreats.com/Content/PrivacyTerms/" data-name="Privacy &amp; Terms" title="Privacy and Terms"><?php _e('Privacy and Terms','tw'); ?></a></li>
+        <li><a id="showDestinations" data-toggle="collapse" href="#destinationsMenu" aria-expanded="false" aria-controls="destinationsMenu" data-name="Our Destinations" title="Our Destinations"><?php _e('Our Destinations','tw');?>&nbsp;<i class="fa fa-caret-down"></i></a></li>
+        <li><a href="<?php echo lr_get_base_url(); ?>content/about" data-name="About"><?php _e('About Us','tw');?></a></li>
+        <li><a href="<?php echo lr_get_base_url(); ?>tabletapp" data-name="Our App" title="Our App"><?php _e('App Store','tw');?></a></li>
+        <li><a href="<?php echo lr_get_base_url(); ?>Content/Press/" data-name="Press" title="Press"><?php _e('Press','tw');?></a></li>
+        <li><a href="<?php echo lr_get_base_url(); ?>careers/" data-name="Careers" title="Careers"><?php _e('Careers','tw');?></a></li>
+        <li><a href="<?php echo lr_get_base_url(); ?>Content/PrivacyTerms/" data-name="Privacy &amp; Terms" title="Privacy and Terms"><?php _e('Privacy and Terms','tw'); ?></a></li>
         <li><a href="http://fr.luxuryretreats.com/" data-name="Français" title="Français"><?php _e('Français','tw');?></a></li>
       </ul>
 
@@ -17,27 +17,17 @@
     </div><!-- .copyright -->
 
   </div>
-  <div id="credit" class="col-xs-12 col-sm-4 col-md-4">
+  <div id="credit" class="col-xs-12 col-sm-12 col-md-4">
 
     <?php
       $footer_social  = isset($tgo['enable_footer_social']) ? !!$tgo['enable_footer_social'] : true;
       if($footer_social):
-
-        if(function_exists('tw_get_theme_social_options')){
-          $square_social_icons = false;
-          $social_info   = tw_get_theme_social_options($square_social_icons);
-        }elseif(function_exists('get_lr_social')){
-          $social_info = get_lr_social();
-        }else{
-          $social_info = false;
-        }
-
+        $social_info = lr_get_social();
         if($social_info):
-          unset($social_info['rss']);
           $count = count($social_info);
         ?>
       <div id="footer-social" class="footer-social <?php //echo $footer_social_class;?>">
-        <h3><?php _e("Let's Socialize",'tw'); ?></h3>
+        <h3 class="hidden-xs hidden-sm visible-md-*"><?php _e("Let's Socialize",'tw'); ?></h3>
         <ul>
           <?php foreach($social_info as $network=>$details): ?>
             <li class="width-<?php echo $count; ?>">
