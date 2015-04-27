@@ -1,5 +1,23 @@
 .navbar-inverse{
   //border-bottom: none;
+  padding: 10px 0 0 0;
+  font-family: @font-brandon-reg;
+  letter-spacing: 1px;
+  background-color: #000 !important;
+  border-color: #000;
+  .border-radius(0);
+  margin-bottom: 0;
+
+  .navbar-brand{
+    padding-top: 0;
+    padding-bottom: 0;
+    img{
+      width: auto;
+      height: auto;
+      max-height: 100%;
+    }
+  }
+
   .navbar-nav{
     & >.active{
       & >a{
@@ -15,7 +33,9 @@
         border-bottom: 5px solid #000;
         text-transform: uppercase !important;
         border-bottom: 5px solid #000;
-        padding-bottom: 9px;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 14px;
         font-size: 13px;
         margin-left: 1px;
         margin-right: 1px;
@@ -25,5 +45,155 @@
         }
       }
     }
+
+    .btn-primary{
+      padding: 8px 25px 3px 25px;
+      background-color: @color-lr-green;
+      border-color: @color-lr-green;
+      color: #fff;
+      font-family: @font-brandon-light;
+      &:hover{
+        background-color: @color-lr-green-light;
+        border-color: @color-lr-green-light;
+        font-family: @font-brandon-light;
+      }
+    }
+  }
+
+  .nav{
+    & .open>a,
+    & .open>a:focus,
+    & .open>a:hover{
+      border-color: @color-lr-green;
+    }
+  }
+
+}
+
+
+#subMenuWrapper{
+  #vacationIdeaWrapper{
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    background: #fff;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border-bottom: 1px solid #d7d7d7;
+    -webkit-box-shadow: 0 0 20px #444;
+    -moz-box-shadow: 0 0 20px #444;
+    box-shadow: 0 0 20px #444;
+    z-index: 2;
+    //max-height: 235px;
+    //overflow-y: scroll;
+    position: relative;
+
+    .container{
+      padding: 50px 20px 40px;
+      text-align: left;
+      width: 100%;
+      max-width: 1070px;
+      position: relative;
+    }
+    .headerCloser{
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      cursor: pointer;
+      font-size: 20px;
+      display: inline-block;
+      line-height: 0;
+      color: #545454;
+    }
+
+
+
+    h3.ideaTitle{
+      font-size: 35px !important;
+      text-transform: uppercase;
+      color: #000;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      text-align: left;
+      font-family: @font-brandon-reg;
+      color: #000;
+      line-height: 56px;
+      margin-bottom: 15px;
+      margin-top: 0;
+    }
+    h4.ideaSubtitle{
+      color: #545454;
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .ideaLeft{
+      .ideaArea{
+          padding-right: 2.5%;
+
+          .ideaImgLnk{
+            width: 100%;
+            position: relative;
+            height: 100%;
+            display: block;
+            &:hover{
+              .ideaOverlay{
+                display: none;
+              }
+            }
+            img.ideaImg{
+              max-width: 100%;
+              height: auto;
+              width: 100%;
+              vertical-align: middle;
+              min-height: 135px;
+            }
+            .ideaOverlay{
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: inherit;
+              height: 100%;
+              color: #fff;
+              text-align: center;
+              background: none;
+              background: rgba(0,0,0,0.5);
+
+              .ideaIconWrapper{
+                margin-top: 40px;
+                text-align: center;
+              }
+            }
+          }
+        }
+    }
+    .ideaRight{
+      padding-left: 38px;
+      border-left: 1px solid #d7d7d7;
+      .ideaList{
+        padding: 0;
+        margin: 0;
+        list-style: none outside none;
+
+        a{
+          &:link,
+          &:active,
+          &:visited,
+          &:hover{
+            font-size: 18px;
+            color: #000;
+            text-transform: uppercase;
+            font-family: @font-brandon-bold;
+          }
+        }
+
+
+
+      }
+    }
+
   }
 }

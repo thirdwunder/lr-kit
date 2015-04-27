@@ -13,37 +13,48 @@ if(!function_exists('tw_slugify')){
   }
 }
 
-function lr_get_base_url(){
-  return 'http://www2.luxuryretreats.com/';
-}
-
-function lr_get_social(){
-  $social = array(
-    "facebook"    => array( 'url'=>"https://www.facebook.com/luxuryretreats", 'icon'=>'fa-facebook'),
-    "twitter"     => array( 'url'=>"https://twitter.com/luxuryretreats", 'icon'=>'fa-twitter'),
-    "pinterest"   => array( 'url'=>"http://pinterest.com/luxuryretreats", 'icon'=>'fa-pinterest'),
-    "googleplus"  => array( 'url'=>"https://plus.google.com/+Luxuryretreats", 'icon'=>'fa-google-plus'),
-    "linkedin"    => array( 'url'=>"http://www.linkedin.com/company/luxury-retreats", 'icon'=>'fa-linkedin'),
-    "instagram"   => array( 'url'=>"http://instagram.com/luxuryretreats", 'icon'=>'fa-instagram'),
-  );
-  $social_info = array();
-  if(function_exists('tw_get_theme_social_options')){
-    $square_social_icons = false;
-    $social_info   = tw_get_theme_social_options($square_social_icons);
-    unset($social_info['rss']);
-    $temp = array();
-    foreach($social as $k=>$v){
-      $temp[$k] = $social_info[$k];
-    }
-    $social_info = $temp;
-  }else{
-    $social_info = $social;
+if(!function_exists('lr_get_base_url')){
+  function lr_get_base_url(){
+    echo 'http://www2.luxuryretreats.com/';
   }
-
-  return $social_info;
-
 }
 
+if(!function_exists('lr_get_magazine_url')){
+  function lr_get_magazine_url(){
+    echo 'http://magazine.luxuryretreats.com/';
+  }
+}
+
+if(!function_exists('lr_get_social')){
+  function lr_get_social(){
+    $social = array(
+      "facebook"    => array( 'url'=>"https://www.facebook.com/luxuryretreats", 'icon'=>'fa-facebook'),
+      "twitter"     => array( 'url'=>"https://twitter.com/luxuryretreats", 'icon'=>'fa-twitter'),
+      "pinterest"   => array( 'url'=>"http://pinterest.com/luxuryretreats", 'icon'=>'fa-pinterest'),
+      "googleplus"  => array( 'url'=>"https://plus.google.com/+Luxuryretreats", 'icon'=>'fa-google-plus'),
+      "linkedin"    => array( 'url'=>"http://www.linkedin.com/company/luxury-retreats", 'icon'=>'fa-linkedin'),
+      "instagram"   => array( 'url'=>"http://instagram.com/luxuryretreats", 'icon'=>'fa-instagram'),
+    );
+    $social_info = array();
+    if(function_exists('tw_get_theme_social_options')){
+      $square_social_icons = false;
+      $social_info   = tw_get_theme_social_options($square_social_icons);
+      unset($social_info['rss']);
+      $temp = array();
+      foreach($social as $k=>$v){
+        $temp[$k] = $social_info[$k];
+      }
+      $social_info = $temp;
+    }else{
+      $social_info = $social;
+    }
+
+    return $social_info;
+
+  }
+}
+
+if(!function_exists('lr_get_destinations')){
 function lr_get_destinations(){
   $destinations = array(
     'Austria'=> array(
@@ -519,7 +530,9 @@ function lr_get_destinations(){
   );
   return $destinations;
 }
+}
 
+if(!function_exists('lr_get_regions')){
 function lr_get_regions(){
 	$africa = array(
     'id'=> 4,
@@ -1466,7 +1479,9 @@ $north_america = array(
   );
   return $regions;
 }
+}
 
+if(!function_exists('lr_update_region')){
 function lr_update_region($r_id, $r_name, $r_slug, $r_level, $parent_id=0){
     $taxonomy = 'lr_property_region';
     $parent=null;
@@ -1509,4 +1524,5 @@ function lr_update_region($r_id, $r_name, $r_slug, $r_level, $parent_id=0){
     }else{
       return 'error';
     }
+}
 }
