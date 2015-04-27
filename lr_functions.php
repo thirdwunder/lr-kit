@@ -1,4 +1,4 @@
-return<?php
+<?php
 if(!function_exists('tw_slugify')){
   function tw_slugify($text){
     $text = preg_replace('~[^\\pL\d]+~u', '-', $text); // replace non letter or digits by -
