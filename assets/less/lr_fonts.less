@@ -6,6 +6,9 @@
 /***************************************
 ********** Mandatory Fonts *************
 ***************************************/
+//Paths
+@lr-font-path: '../fonts';
+
 //Regular Fonts
 @font-arial: Arial, Helvetica, sans-serif;
 @font-georgia: Georgia, Times, "Times New Roman", serif;
@@ -16,20 +19,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @font-opensans:  'Open Sans', sans-serif;
 
-// Font Awesome
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('../../lib/fontawesome/fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('../../lib/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'),
-       url('../../lib/fontawesome/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'),
-       url('../../lib/fontawesome/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'),
-       url('../../lib/fontawesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-fontawesome: 'FontAwesome';
-@fa-font-path:      "../../lib/fontawesome/fonts";
-
 /***************************************
 *********** Optional Fonts *************
 ***************************************/
@@ -38,30 +27,13 @@
 @font-lucida: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 @font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-@import url(http://fonts.googleapis.com/css?family=Cabin);
-@font-cabin:     'Cabin', sans-serif;
-
-@import url(http://fonts.googleapis.com/css?family=Rochester);
-@font-rochester: 'Rochester', cursive;
-
-// Google Fonts
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic);
-@font-roboto: 'Roboto', sans-serif;
-
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700);
-@font-roboto-condensed: 'Roboto Condensed', sans-serif;
-
-@import url(http://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,300,700,800);
-@font-fjalla: 'Fjalla One', sans-serif;
-
-
 // Font Files
 @font-face {
   font-family: 'ProximaNovaT-Thin';
-  src: url('../fonts/proxima-nova-web/ProximaNovaT-Thin/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/proxima-nova-web/ProximaNovaT-Thin/ProximaNovaT-Thin.woff') format('woff'),
-       url('../fonts/proxima-nova-web/ProximaNovaT-Thin/ProximaNovaT-Thin.ttf')  format('truetype'),
-       url('../fonts/proxima-nova-web/ProximaNovaT-Thin/ProximaNovaT-Thin.svg#ProximaNovaT-Thin') format('svg');
+  src: url('@{lr-font-path}/proxima-nova-web/ProximaNovaT-Thin/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNovaT-Thin/ProximaNovaT-Thin.woff') format('woff'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNovaT-Thin/ProximaNovaT-Thin.ttf')  format('truetype'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNovaT-Thin/ProximaNovaT-Thin.svg#ProximaNovaT-Thin') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -69,10 +41,10 @@
 
 @font-face {
   font-family: 'ProximaNova-ThinIt';
-  src: url('../fonts/proxima-nova-web/ProximaNova-Thinit/ProximaNova-ThinIt.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/proxima-nova-web/ProximaNova-Thinit/ProximaNova-ThinIt.woff') format('woff'),
-       url('../fonts/proxima-nova-web/ProximaNova-Thinit/ProximaNova-ThinIt.ttf')  format('truetype'),
-       url('../fonts/proxima-nova-web/ProximaNova-Thinit/ProximaNova-ThinIt.svg#ProximaNova-ThinIt') format('svg');
+  src: url('@{lr-font-path}/proxima-nova-web/ProximaNova-Thinit/ProximaNova-ThinIt.eot?#iefix') format('embedded-opentype'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Thinit/ProximaNova-ThinIt.woff') format('woff'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Thinit/ProximaNova-ThinIt.ttf')  format('truetype'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Thinit/ProximaNova-ThinIt.svg#ProximaNova-ThinIt') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -81,10 +53,10 @@
 
 @font-face {
   font-family: 'ProximaNova-Regular';
-  src: url('../fonts/proxima-nova-web/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/proxima-nova-web/ProximaNova-Regular/ProximaNova-Regular.woff') format('woff'),
-       url('../fonts/proxima-nova-web/ProximaNova-Regular/ProximaNova-Regular.ttf')  format('truetype'),
-       url('../fonts/proxima-nova-web/ProximaNova-Regular/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+  src: url('@{lr-font-path}/proxima-nova-web/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Regular/ProximaNova-Regular.woff') format('woff'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Regular/ProximaNova-Regular.ttf')  format('truetype'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Regular/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -92,10 +64,10 @@
 
 @font-face {
   font-family: 'ProximaNova-RegularIt';
-  src: url('../fonts/proxima-nova-web/ProximaNova-Regularit/ProximaNova-RegularIt.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/proxima-nova-web/ProximaNova-Regularit/ProximaNova-RegularIt.woff') format('woff'),
-       url('../fonts/proxima-nova-web/ProximaNova-Regularit/ProximaNova-RegularIt.ttf')  format('truetype'),
-       url('../fonts/proxima-nova-web/ProximaNova-Regularit/ProximaNova-RegularIt.svg#ProximaNova-RegularIt') format('svg');
+  src: url('@{lr-font-path}/proxima-nova-web/ProximaNova-Regularit/ProximaNova-RegularIt.eot?#iefix') format('embedded-opentype'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Regularit/ProximaNova-RegularIt.woff') format('woff'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Regularit/ProximaNova-RegularIt.ttf')  format('truetype'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Regularit/ProximaNova-RegularIt.svg#ProximaNova-RegularIt') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -103,10 +75,10 @@
 
 @font-face {
   font-family: 'ProximaNova-Semibold';
-  src: url('../fonts/proxima-nova-web/ProximaNova-Semibold/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/proxima-nova-web/ProximaNova-Semibold/ProximaNova-Semibold.woff') format('woff'),
-       url('../fonts/proxima-nova-web/ProximaNova-Semibold/ProximaNova-Semibold.ttf')  format('truetype'),
-       url('../fonts/proxima-nova-web/ProximaNova-Semibold/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg');
+  src: url('@{lr-font-path}/proxima-nova-web/ProximaNova-Semibold/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Semibold/ProximaNova-Semibold.woff') format('woff'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Semibold/ProximaNova-Semibold.ttf')  format('truetype'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Semibold/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -114,10 +86,10 @@
 
 @font-face {
   font-family: 'ProximaNova-SemiboldIt';
-  src: url('../fonts/proxima-nova-web/ProximaNova-Semiboldit/ProximaNova-SemiboldIt.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/proxima-nova-web/ProximaNova-Semiboldit/ProximaNova-SemiboldIt.woff') format('woff'),
-       url('../fonts/proxima-nova-web/ProximaNova-Semiboldit/ProximaNova-SemiboldIt.ttf')  format('truetype'),
-       url('../fonts/proxima-nova-web/ProximaNova-Semiboldit/ProximaNova-SemiboldIt.svg#ProximaNova-SemiboldIt') format('svg');
+  src: url('@{lr-font-path}/proxima-nova-web/ProximaNova-Semiboldit/ProximaNova-SemiboldIt.eot?#iefix') format('embedded-opentype'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Semiboldit/ProximaNova-SemiboldIt.woff') format('woff'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Semiboldit/ProximaNova-SemiboldIt.ttf')  format('truetype'),
+       url('@{lr-font-path}/proxima-nova-web/ProximaNova-Semiboldit/ProximaNova-SemiboldIt.svg#ProximaNova-SemiboldIt') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -126,12 +98,12 @@
 
 @font-face {
     font-family: 'brandon_light';
-    src: url('../fonts/brandon/brandon_light-webfont.eot');
-    src: url('../fonts/brandon/brandon_light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/brandon/brandon_light-webfont.woff2') format('woff2'),
-         url('../fonts/brandon/brandon_light-webfont.woff') format('woff'),
-         url('../fonts/brandon/brandon_light-webfont.ttf') format('truetype'),
-         url('../fonts/brandon/brandon_light-webfont.svg#brandon_grotesquelight') format('svg');
+    src: url('@{lr-font-path}/brandon/brandon_light-webfont.eot');
+    src: url('@{lr-font-path}/brandon/brandon_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{lr-font-path}/brandon/brandon_light-webfont.woff2') format('woff2'),
+         url('@{lr-font-path}/brandon/brandon_light-webfont.woff') format('woff'),
+         url('@{lr-font-path}/brandon/brandon_light-webfont.ttf') format('truetype'),
+         url('@{lr-font-path}/brandon/brandon_light-webfont.svg#brandon_grotesquelight') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -139,12 +111,12 @@
 
 @font-face {
     font-family: 'brandon_light_italic';
-    src: url('../fonts/brandon/brandon_light_it-webfont.eot');
-    src: url('../fonts/brandon/brandon_light_it-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/brandon/brandon_light_it-webfont.woff2') format('woff2'),
-         url('../fonts/brandon/brandon_light_it-webfont.woff') format('woff'),
-         url('../fonts/brandon/brandon_light_it-webfont.ttf') format('truetype'),
-         url('../fonts/brandon/brandon_light_it-webfont.svg#brandon_grotesquelight_italic') format('svg');
+    src: url('@{lr-font-path}/brandon/brandon_light_it-webfont.eot');
+    src: url('@{lr-font-path}/brandon/brandon_light_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{lr-font-path}/brandon/brandon_light_it-webfont.woff2') format('woff2'),
+         url('@{lr-font-path}/brandon/brandon_light_it-webfont.woff') format('woff'),
+         url('@{lr-font-path}/brandon/brandon_light_it-webfont.ttf') format('truetype'),
+         url('@{lr-font-path}/brandon/brandon_light_it-webfont.svg#brandon_grotesquelight_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -152,12 +124,12 @@
 
 @font-face {
     font-family: 'brandon_regular';
-    src: url('../fonts/brandon/brandon_reg-webfont.eot');
-    src: url('../fonts/brandon/brandon_reg-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/brandon/brandon_reg-webfont.woff2') format('woff2'),
-         url('../fonts/brandon/brandon_reg-webfont.woff') format('woff'),
-         url('../fonts/brandon/brandon_reg-webfont.ttf') format('truetype'),
-         url('../fonts/brandon/brandon_reg-webfont.svg#brandon_grotesque_regularRg') format('svg');
+    src: url('@{lr-font-path}/brandon/brandon_reg-webfont.eot');
+    src: url('@{lr-font-path}/brandon/brandon_reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{lr-font-path}/brandon/brandon_reg-webfont.woff2') format('woff2'),
+         url('@{lr-font-path}/brandon/brandon_reg-webfont.woff') format('woff'),
+         url('@{lr-font-path}/brandon/brandon_reg-webfont.ttf') format('truetype'),
+         url('@{lr-font-path}/brandon/brandon_reg-webfont.svg#brandon_grotesque_regularRg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -165,12 +137,12 @@
 
 @font-face {
     font-family: 'brandon_regular_italic';
-    src: url('../fonts/brandon/brandon_reg_it-webfont.eot');
-    src: url('../fonts/brandon/brandon_reg_it-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/brandon/brandon_reg_it-webfont.woff2') format('woff2'),
-         url('../fonts/brandon/brandon_reg_it-webfont.woff') format('woff'),
-         url('../fonts/brandon/brandon_reg_it-webfont.ttf') format('truetype'),
-         url('../fonts/brandon/brandon_reg_it-webfont.svg#brandon_grotesqueRgIt') format('svg');
+    src: url('@{lr-font-path}/brandon/brandon_reg_it-webfont.eot');
+    src: url('@{lr-font-path}/brandon/brandon_reg_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{lr-font-path}/brandon/brandon_reg_it-webfont.woff2') format('woff2'),
+         url('@{lr-font-path}/brandon/brandon_reg_it-webfont.woff') format('woff'),
+         url('@{lr-font-path}/brandon/brandon_reg_it-webfont.ttf') format('truetype'),
+         url('@{lr-font-path}/brandon/brandon_reg_it-webfont.svg#brandon_grotesqueRgIt') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -178,12 +150,12 @@
 
 @font-face {
     font-family: 'brandon_medium';
-    src: url('../fonts/brandon/brandon_med-webfont.eot');
-    src: url('../fonts/brandon/brandon_med-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/brandon/brandon_med-webfont.woff2') format('woff2'),
-         url('../fonts/brandon/brandon_med-webfont.woff') format('woff'),
-         url('../fonts/brandon/brandon_med-webfont.ttf') format('truetype'),
-         url('../fonts/brandon/brandon_med-webfont.svg#brandon_grotesquemedium') format('svg');
+    src: url('@{lr-font-path}/brandon/brandon_med-webfont.eot');
+    src: url('@{lr-font-path}/brandon/brandon_med-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{lr-font-path}/brandon/brandon_med-webfont.woff2') format('woff2'),
+         url('@{lr-font-path}/brandon/brandon_med-webfont.woff') format('woff'),
+         url('@{lr-font-path}/brandon/brandon_med-webfont.ttf') format('truetype'),
+         url('@{lr-font-path}/brandon/brandon_med-webfont.svg#brandon_grotesquemedium') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -191,12 +163,12 @@
 
 @font-face {
     font-family: 'brandon_medium_italic';
-    src: url('../fonts/brandon/brandon_med_it-webfont.eot');
-    src: url('../fonts/brandon/brandon_med_it-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/brandon/brandon_med_it-webfont.woff2') format('woff2'),
-         url('../fonts/brandon/brandon_med_it-webfont.woff') format('woff'),
-         url('../fonts/brandon/brandon_med_it-webfont.ttf') format('truetype'),
-         url('../fonts/brandon/brandon_med_it-webfont.svg#brandon_grotesqueMdIt') format('svg');
+    src: url('@{lr-font-path}/brandon/brandon_med_it-webfont.eot');
+    src: url('@{lr-font-path}/brandon/brandon_med_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{lr-font-path}/brandon/brandon_med_it-webfont.woff2') format('woff2'),
+         url('@{lr-font-path}/brandon/brandon_med_it-webfont.woff') format('woff'),
+         url('@{lr-font-path}/brandon/brandon_med_it-webfont.ttf') format('truetype'),
+         url('@{lr-font-path}/brandon/brandon_med_it-webfont.svg#brandon_grotesqueMdIt') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -204,12 +176,12 @@
 
 @font-face {
     font-family: 'brandon_bold';
-    src: url('../fonts/brandon/brandon_bld-webfont.eot');
-    src: url('../fonts/brandon/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/brandon/brandon_bld-webfont.woff2') format('woff2'),
-         url('../fonts/brandon/brandon_bld-webfont.woff') format('woff'),
-         url('../fonts/brandon/brandon_bld-webfont.ttf') format('truetype'),
-         url('../fonts/brandon/brandon_bld-webfont.svg#brandon_grotesquebold') format('svg');
+    src: url('@{lr-font-path}/brandon/brandon_bld-webfont.eot');
+    src: url('@{lr-font-path}/brandon/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{lr-font-path}/brandon/brandon_bld-webfont.woff2') format('woff2'),
+         url('@{lr-font-path}/brandon/brandon_bld-webfont.woff') format('woff'),
+         url('@{lr-font-path}/brandon/brandon_bld-webfont.ttf') format('truetype'),
+         url('@{lr-font-path}/brandon/brandon_bld-webfont.svg#brandon_grotesquebold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -217,12 +189,12 @@
 
 @font-face {
     font-family: 'brandon_bold_italic';
-    src: url('../fonts/brandon/brandon_bld_it-webfont.eot');
-    src: url('../fonts/brandon/brandon_bld_it-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/brandon/brandon_bld_it-webfont.woff2') format('woff2'),
-         url('../fonts/brandon/brandon_bld_it-webfont.woff') format('woff'),
-         url('../fonts/brandon/brandon_bld_it-webfont.ttf') format('truetype'),
-         url('../fonts/brandon/brandon_bld_it-webfont.svg#brandon_grotesquebold_italic') format('svg');
+    src: url('@{lr-font-path}/brandon/brandon_bld_it-webfont.eot');
+    src: url('@{lr-font-path}/brandon/brandon_bld_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{lr-font-path}/brandon/brandon_bld_it-webfont.woff2') format('woff2'),
+         url('@{lr-font-path}/brandon/brandon_bld_it-webfont.woff') format('woff'),
+         url('@{lr-font-path}/brandon/brandon_bld_it-webfont.ttf') format('truetype'),
+         url('@{lr-font-path}/brandon/brandon_bld_it-webfont.svg#brandon_grotesquebold_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -231,12 +203,12 @@
 
 @font-face {
     font-family: 'dragon_is_coming';
-    src: url('../fonts/myriad_sketch/dragon_is_coming-webfont.eot');
-    src: url('../fonts/myriad_sketch/dragon_is_coming-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/myriad_sketch/dragon_is_coming-webfont.woff2') format('woff2'),
-         url('../fonts/myriad_sketch/dragon_is_coming-webfont.woff') format('woff'),
-         url('../fonts/myriad_sketch/dragon_is_coming-webfont.ttf') format('truetype'),
-         url('../fonts/myriad_sketch/dragon_is_coming-webfont.svg#dragon_is_comingregular') format('svg');
+    src: url('@{lr-font-path}/myriad_sketch/dragon_is_coming-webfont.eot');
+    src: url('@{lr-font-path}/myriad_sketch/dragon_is_coming-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{lr-font-path}/myriad_sketch/dragon_is_coming-webfont.woff2') format('woff2'),
+         url('@{lr-font-path}/myriad_sketch/dragon_is_coming-webfont.woff') format('woff'),
+         url('@{lr-font-path}/myriad_sketch/dragon_is_coming-webfont.ttf') format('truetype'),
+         url('@{lr-font-path}/myriad_sketch/dragon_is_coming-webfont.svg#dragon_is_comingregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -244,12 +216,12 @@
 
 @font-face {
     font-family: 'myriad_regular';
-    src: url('../fonts/myriad_sketch/myriad_sketch-2-webfont.eot');
-    src: url('../fonts/myriad_sketch/myriad_sketch-2-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/myriad_sketch/myriad_sketch-2-webfont.woff2') format('woff2'),
-         url('../fonts/myriad_sketch/myriad_sketch-2-webfont.woff') format('woff'),
-         url('../fonts/myriad_sketch/myriad_sketch-2-webfont.ttf') format('truetype'),
-         url('../fonts/myriad_sketch/myriad_sketch-2-webfont.svg#myriadregular') format('svg');
+    src: url('@{lr-font-path}/myriad_sketch/myriad_sketch-2-webfont.eot');
+    src: url('@{lr-font-path}/myriad_sketch/myriad_sketch-2-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{lr-font-path}/myriad_sketch/myriad_sketch-2-webfont.woff2') format('woff2'),
+         url('@{lr-font-path}/myriad_sketch/myriad_sketch-2-webfont.woff') format('woff'),
+         url('@{lr-font-path}/myriad_sketch/myriad_sketch-2-webfont.ttf') format('truetype'),
+         url('@{lr-font-path}/myriad_sketch/myriad_sketch-2-webfont.svg#myriadregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
