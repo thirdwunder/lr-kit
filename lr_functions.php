@@ -39,12 +39,16 @@ if(!function_exists('lr_get_social')){
     if(function_exists('tw_get_theme_social_options')){
       $square_social_icons = false;
       $social_info   = tw_get_theme_social_options($square_social_icons);
-      unset($social_info['rss']);
-      $temp = array();
-      foreach($social as $k=>$v){
-        $temp[$k] = $social_info[$k];
+      if(is_array($social_info) && count($social_info)>0){
+        unset($social_info['rss']);
+        $temp = array();
+        foreach($social as $k=>$v){
+          $temp[$k] = $social_info[$k];
+        }
+        $social_info = $temp;
+      }else{
+        $social_info = $social;
       }
-      $social_info = $temp;
     }else{
       $social_info = $social;
     }
