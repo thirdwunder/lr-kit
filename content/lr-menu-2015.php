@@ -24,18 +24,9 @@
 
         <li><a href="<?php echo lr_get_magazine_url(); ?>" title="<?php _e('Luxury Retreats Magazine','tw');?>" target="_blank"><?php _e('Magazine','tw'); ?></a></li>
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-
-          </ul>
+        <li><a href="<?php echo lr_get_base_url(); ?>/content/contact/" target="_blank"><?php _e('Contact','tw'); ?></a>
         </li>
-        <li><a href="<?php //echo lr_get_base_url(); ?>/#login" class="btn btn-primary"><?php _e('Log In','tw');?></a></li>
+        <li><a href="<?php echo lr_get_base_url(); ?>/#login" class="btn btn-primary"><?php _e('Log In','tw');?></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
