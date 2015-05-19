@@ -22,11 +22,11 @@
           <a href="#" data-toggle="modal" data-target="#subMenuWrapper" role="button" aria-expanded="false"><?php _e('Vacation Ideas','tw');?> <span class="caret"></span></a>
         </li>
 
-        <li><a href="<?php echo lr_get_magazine_url(); ?>" title="<?php _e('Luxury Retreats Magazine','tw');?>" target="_blank"><?php _e('Magazine','tw'); ?></a></li>
+        <li><a href="<?php echo lr_get_magazine_url(); ?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>" title="<?php _e('Luxury Retreats Magazine','tw');?>" target="_blank"><?php _e('Magazine','tw'); ?></a></li>
 
-        <li><a href="<?php echo lr_get_base_url(); ?>/content/contact/" target="_blank"><?php _e('Contact','tw'); ?></a>
+        <li><a href="<?php echo lr_get_base_url(); ?>/content/contact/<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" target="_blank"><?php _e('Contact','tw'); ?></a>
         </li>
-        <li><a href="<?php echo lr_get_base_url(); ?>/#login" class="btn btn-primary"><?php _e('Log In','tw');?></a></li>
+        <li><a href="<?php echo lr_get_base_url(); ?>/#login<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" class="btn btn-primary"><?php _e('Log In','tw');?></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -41,7 +41,7 @@
 
           <div class="row">
             <div class="col-sm-4 ideaArea">
-                <a id="headerBeachfrontLink" class="ideaImgLnk" title="Beachfront retreats" href="/destinations?collections=HasBeach">
+                <a id="headerBeachfrontLink" class="ideaImgLnk" title="Beachfront retreats" href="/destinations?collections=HasBeach<?php if($tracking_code){ echo '&'.$tracking_code; } ?>">
 
 
                     <div>
@@ -51,12 +51,12 @@
                         <div class="ideaIconWrapper">
                             <img class="ideaIcon" src="https://resources.luxuryretreats.com/www/images/v5/iCol_beachfront.png" alt="beachfront escapes icon">
                         </div>
-                        <div>Beachfront Escapes</div>
+                        <div><?php _e('Beachfront Escapes','lr');?></div>
                     </div>
                 </a>
             </div>
             <div class="col-sm-4 ideaArea">
-                <a id="headerGroupsLink" class="ideaImgLnk" title="Group Destinations" href="/destinations?collections=LargeGroups">
+                <a id="headerGroupsLink" class="ideaImgLnk" title="Group Destinations" href="/destinations?collections=LargeGroups<?php if($tracking_code){ echo '&'.$tracking_code; } ?>">
 
                     <div>
 
@@ -67,12 +67,12 @@
                         <div class="ideaIconWrapper">
                             <img class="ideaIcon" src="https://resources.luxuryretreats.com/www/images/v5/iCol_groups.png" alt="good for groups icon">
                         </div>
-                        <div>Good for Groups</div>
+                        <div><?php _e('Good for Groups','lr');?></div>
                     </div>
                 </a>
             </div>
             <div class="col-sm-4 ideaArea">
-                <a id="headerCityLink" class="ideaImgLnk" title="City Retreats" href="/destinations?collections=CityLife">
+                <a id="headerCityLink" class="ideaImgLnk" title="City Retreats" href="/destinations?collections=CityLife<?php if($tracking_code){ echo '&'.$tracking_code; } ?>">
 
                     <div>
                         <img class="ideaImg" src="https://resources.luxuryretreats.com/www/images/v5/header_idea_city.jpg" alt="city breaks">
@@ -82,7 +82,7 @@
                         <div class="ideaIconWrapper">
                             <img class="ideaIcon" src="https://resources.luxuryretreats.com/www/images/v5/iCol_city.png" alt="city breaks icon">
                         </div>
-                        <div>City Breaks</div>
+                        <div><?php _e('City Breaks','lr');?></div>
                     </div>
                 </a>
             </div>
@@ -92,12 +92,12 @@
         <div class="hidden-xs col-sm-4 col-md-4 ideaRight">
           <h4 class="ideaSubtitle"><?php _e('Explore Our Top Destinations:','tw');?></h4>
           <ul id="ideaList" class="ideaList">
-              <li><a href="<?php echo lr_get_base_url(); ?>destinations/caribbean/st-barts/" title="St. Barts, Caribbean" data-region="3">St. Barts, Caribbean</a></li>
-              <li><a href="<?php echo lr_get_base_url(); ?>destinations/caribbean/turks-caicos/" title="Turks and Caicos, Caribbea" data-region="3">Turks and Caicos, Caribbean</a></li>
-              <li><a href="<?php echo lr_get_base_url(); ?>destinations/caribbean/barbados/" title="Barbados, Caribbean" data-region="3">Barbados, Caribbean</a></li>
-              <li><a href="<?php echo lr_get_base_url(); ?>destinations/europe/italy/tuscany/" title="Tuscany, Italy" data-region="3">Tuscany, Italy</a></li>
-              <li><a href="<?php echo lr_get_base_url(); ?>destinations/north-america/mexico/riviera-maya/" title="Riviera Maya, Mexico" data-region="3">Riviera Maya, Mexico</a></li>
-              <li><a href="<?php echo lr_get_base_url(); ?>destinations/north-america/united-states/california---desert-cities/" title="Palm Springs, California" data-region="4">Palm Springs, California</a></li>
+              <li><a href="<?php echo lr_get_base_url(); ?>destinations/caribbean/st-barts/<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" title="St. Barts, Caribbean" data-region="3"><?php _e('St. Barts, Caribbean','lr');?></a></li>
+              <li><a href="<?php echo lr_get_base_url(); ?>destinations/caribbean/turks-caicos/<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" title="Turks and Caicos, Caribbea" data-region="3"><?php _e('Turks and Caicos, Caribbean','lr');?></a></li>
+              <li><a href="<?php echo lr_get_base_url(); ?>destinations/caribbean/barbados/<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" title="Barbados, Caribbean" data-region="3"><?php _e('Barbados, Caribbean','lr');?></a></li>
+              <li><a href="<?php echo lr_get_base_url(); ?>destinations/europe/italy/tuscany/<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" title="Tuscany, Italy" data-region="3"><?php _e('Tuscany, Italy','lr');?></a></li>
+              <li><a href="<?php echo lr_get_base_url(); ?>destinations/north-america/mexico/riviera-maya/<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" title="Riviera Maya, Mexico" data-region="3"><?php _e('Riviera Maya, Mexico','lr');?></a></li>
+              <li><a href="<?php echo lr_get_base_url(); ?>destinations/north-america/united-states/california---desert-cities/<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" title="Palm Springs, California" data-region="4"><?php _e('Palm Springs, California','lr');?></a></li>
           </ul>
 
 

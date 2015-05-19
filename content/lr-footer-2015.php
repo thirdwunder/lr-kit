@@ -4,12 +4,12 @@
 
       <ul id="footerLinks">
         <li><a id="showDestinations" data-toggle="collapse" href="#destinationsMenu" aria-expanded="false" aria-controls="destinationsMenu" data-name="Our Destinations" title="Our Destinations"><?php _e('Our Destinations','tw');?>&nbsp;<i class="fa fa-caret-down"></i></a></li>
-        <li><a href="<?php echo lr_get_base_url(); ?>content/about" data-name="About"><?php _e('About Us','tw');?></a></li>
-        <li><a href="<?php echo lr_get_base_url(); ?>tabletapp" data-name="Our App" title="Our App"><?php _e('App Store','tw');?></a></li>
-        <li><a href="<?php echo lr_get_base_url(); ?>Content/Press/" data-name="Press" title="Press"><?php _e('Press','tw');?></a></li>
-        <li><a href="<?php echo lr_get_base_url(); ?>careers/" data-name="Careers" title="Careers"><?php _e('Careers','tw');?></a></li>
-        <li><a href="<?php echo lr_get_base_url(); ?>Content/PrivacyTerms/" data-name="Privacy &amp; Terms" title="Privacy and Terms"><?php _e('Privacy and Terms','tw'); ?></a></li>
-        <li><a href="http://fr.luxuryretreats.com/" data-name="Français" title="Français"><?php _e('Français','tw');?></a></li>
+        <li><a href="<?php echo lr_get_base_url(); ?>content/about<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" data-name="About"><?php _e('About Us','tw');?></a></li>
+        <li><a href="<?php echo lr_get_base_url(); ?>tabletapp<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" data-name="Our App" title="Our App"><?php _e('App Store','tw');?></a></li>
+        <li><a href="<?php echo lr_get_base_url(); ?>Content/Press/<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" data-name="Press" title="Press"><?php _e('Press','tw');?></a></li>
+        <li><a href="<?php echo lr_get_base_url(); ?>careers/<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" data-name="Careers" title="Careers"><?php _e('Careers','tw');?></a></li>
+        <li><a href="<?php echo lr_get_base_url(); ?>Content/PrivacyTerms/<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" data-name="Privacy &amp; Terms" title="Privacy and Terms"><?php _e('Privacy and Terms','tw'); ?></a></li>
+        <li><a href="http://fr.luxuryretreats.com/<?php if($tracking_code){ echo '?'.$tracking_code; } ?>" data-name="Français" title="Français"><?php _e('Français','tw');?></a></li>
       </ul>
 
     <div class="copyright">

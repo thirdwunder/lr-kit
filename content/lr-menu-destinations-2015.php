@@ -8,23 +8,23 @@
               <li>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Austria']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Austria']['name'];?></a>
+                  <a title="<?php echo $destinations['Austria']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Austria']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Austria']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Caribbean']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Caribbean']['name'];?></a>
+                  <a title="<?php echo $destinations['Caribbean']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Caribbean']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Caribbean']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Caribbean']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
@@ -45,45 +45,45 @@
 
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Canada']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Canada']['name'];?></a>
+                  <a title="<?php echo $destinations['Canada']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Canada']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Canada']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Canada']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Central America']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Central America']['name'];?></a>
+                  <a title="<?php echo $destinations['Central America']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Central America']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Central America']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Central America']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Croatia']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Croatia']['name'];?></a>
+                  <a title="<?php echo $destinations['Croatia']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Croatia']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Croatia']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Croatia']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['France']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['France']['name'];?></a>
+                  <a title="<?php echo $destinations['France']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['France']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['France']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['France']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
@@ -105,45 +105,45 @@
 
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Greece']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Greece']['name'];?></a>
+                  <a title="<?php echo $destinations['Greece']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Greece']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Greece']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Greece']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Hawaii']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Hawaii']['name'];?></a>
+                  <a title="<?php echo $destinations['Hawaii']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Hawaii']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Hawaii']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Hawaii']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Indian Ocean']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Indian Ocean']['name'];?></a>
+                  <a title="<?php echo $destinations['Indian Ocean']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Indian Ocean']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Indian Ocean']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Indian Ocean']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Indonesia']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Indonesia']['name'];?></a>
+                  <a title="<?php echo $destinations['Indonesia']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Indonesia']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Indonesia']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Indonesia']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
@@ -153,34 +153,34 @@
             <ul class="topDestinationListBlock col-xs-6 col-sm-4 col-md-2">
               <li>
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Italy']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Italy']['name'];?></a>
+                  <a title="<?php echo $destinations['Italy']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Italy']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Italy']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Italy']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Mexico']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Mexico']['name'];?></a>
+                  <a title="<?php echo $destinations['Mexico']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Mexico']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Mexico']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Mexico']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Portugal']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Portugal']['name'];?></a>
+                  <a title="<?php echo $destinations['Portugal']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Portugal']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Portugal']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Portugal']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
@@ -191,45 +191,45 @@
               <li>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['South Africa']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['South Africa']['name'];?></a>
+                  <a title="<?php echo $destinations['South Africa']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['South Africa']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['South Africa']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['South Africa']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Spain']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Spain']['name'];?></a>
+                  <a title="<?php echo $destinations['Spain']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Spain']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Spain']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Spain']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Switzerland']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Switzerland']['name'];?></a>
+                  <a title="<?php echo $destinations['Switzerland']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Switzerland']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Switzerland']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Switzerland']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
 
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['Thailand']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Austria']['url'];?>"><?php echo $destinations['Thailand']['name'];?></a>
+                  <a title="<?php echo $destinations['Thailand']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['Thailand']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['Thailand']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['Thailand']['destinations'] as $city): ?>
                   <li>
-                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?>"><?php echo $city['name'];?></a>
+                    <a title="<?php echo $city['name'];?>" href="<?php echo $city['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $city['name'];?></a>
                   </li>
                   <?php endforeach; ?>
                 </ul>
@@ -239,26 +239,26 @@
             <ul class="topDestinationListBlock col-xs-6 col-sm-4 col-md-2">
               <li>
                 <h3 class="topDestinationTlt">
-                  <a title="<?php echo $destinations['United States']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['United States']['url'];?>"><?php echo $destinations['United States']['name'];?></a>
+                  <a title="<?php echo $destinations['United States']['name'];?> villas &amp; vacation rentals" href="<?php echo $destinations['United States']['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $destinations['United States']['name'];?></a>
                 </h3>
                 <ul>
                   <?php foreach($destinations['United States']['destinations'] as $states): ?>
                   <li>
                     <?php if(isset($states['destinations'])): ?>
                     <h4 class="topDestinationTlt">
-                      <a title="<?php echo $states['name'];?>" href="<?php echo $states['url'];?>"><?php echo $states['name'];?></a>
+                      <a title="<?php echo $states['name'];?>" href="<?php echo $states['url'];?><?php if($tracking_code){ echo '&'.$tracking_code; } ?>"><?php echo $states['name'];?></a>
                     </h4>
                     <ul>
                       <?php foreach($states['destinations'] as $city): ?>
                       <li>
-                        <a href="<?php echo $city['url']; ?>" title="<?php echo $city['name']; ?>"><?php echo $city['name']; ?></a>
+                        <a href="<?php echo $city['url']; ?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>" title="<?php echo $city['name']; ?>"><?php echo $city['name']; ?></a>
                       </li>
                       <?php endforeach; ?>
                     </ul>
 
 
                     <?php else: ?>
-                    <a title="<?php echo $states['name'];?>" href="<?php echo $states['url'];?>"><?php echo $states['name'];?></a>
+                    <a title="<?php echo $states['name'];?>" href="<?php echo $states['url'];?><?php if($tracking_code){ echo '?'.$tracking_code; } ?><?php if($tracking_code){ echo '?'.$tracking_code; } ?>"><?php echo $states['name'];?></a>
                     <?php endif; ?>
                   </li>
                   <?php endforeach; ?>
