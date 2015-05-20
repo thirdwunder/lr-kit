@@ -1530,3 +1530,25 @@ function lr_update_region($r_id, $r_name, $r_slug, $r_level, $parent_id=0){
     }
 }
 }
+
+
+if(!function_exists('lr_get_tracking_params')){
+  function lr_get_tracking_params(){
+    $params = array(
+      'src',
+      'c3',
+      'c3api',
+      'c3ch',
+      'c3nid',
+      'utm_source',
+      'utm_medium',
+      'utm_campaign',
+      'utm_term',
+      'utm_content',
+      'cluid',
+      'DBMK',
+      'gclid',
+    );
+    return $params;
+  }
+}
