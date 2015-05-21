@@ -212,10 +212,13 @@
 @screen-lg: 1200px;
 
 @media only screen and (max-width: @screen-sm){
-	.navbar-brand{
-  	float: none;
-  	& > img{
-    	margin: 0 auto;
+  .navbar-inverse{
+  	.navbar-brand{
+    	float: none;
+    	padding: 0 !important;
+    	img{
+      	margin: 5px auto 10px auto;
+    	}
   	}
-	}
+  }
 }
