@@ -1552,3 +1552,14 @@ if(!function_exists('lr_get_tracking_params')){
     return $params;
   }
 }
+
+if(!function_exists('add_tracking_query_vars')){
+  function add_tracking_query_vars($aVars) {
+    $params = lr_get_tracking_params();
+    foreach($params as $p){
+      $aVars[] = $p;
+    }
+    return $aVars;
+  }
+  add_filter('query_vars', 'add_tracking_query_vars');
+}
