@@ -206,3 +206,16 @@
 
   }
 }
+
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;
+
+@media only screen and (max-width: @screen-sm){
+	.navbar-brand{
+  	float: none;
+  	& > img{
+    	margin: 0 auto;
+  	}
+	}
+}
