@@ -47,16 +47,33 @@
       }
     }
 
-    .btn-primary{
+    .btn-primary,
+    .btn-success{
       padding: 8px 25px 3px 25px;
-      background-color: @color-lr-green;
-      border-color: @color-lr-green;
       color: #fff;
       font-family: @font-thin;
       &:hover{
+        font-family: @font-thin;
+      }
+    }
+    .btn-success{
+      //background-color: @color-lr-orange;
+      background-color: @color-lr-orange;
+      border-color: @color-lr-orange;
+      border: 1px solid @color-lr-orange;
+      &:hover{
+        background-color: @color-lr-orange-dark !important;
+        border-color: @color-lr-orange-dark;
+        border: 1px solid @color-lr-orange-dark;
+      }
+    }
+    .btn-primary{
+
+      background-color: @color-lr-green;
+      border-color: @color-lr-green;
+      &:hover{
         background-color: @color-lr-green-light;
         border-color: @color-lr-green-light;
-        font-family: @font-thin;
       }
     }
   }
