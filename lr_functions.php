@@ -1563,3 +1563,28 @@ if(!function_exists('add_tracking_query_vars')){
   }
   add_filter('query_vars', 'add_tracking_query_vars');
 }
+
+function lr_get_general_options(){
+  $lr_general_options = get_option('lr_theme_general_options', false);
+  return $lr_general_options;
+}
+
+function is_enabled_branded_header(){
+  $options = lr_get_general_options();
+  error_log($options['enable_branded_header']);
+
+  $is_enabled = is_array($options) && isset($options['enable_branded_header']) && $options['enable_branded_header'] ? true : false;
+  return $is_enabled;
+}
+
+function is_enabled_branded_footer(){
+  $options = lr_get_general_options();
+  $is_enabled = is_array($options) && isset($options['enable_branded_footer']) && $options['enable_branded_footer'] ? true : false;
+  return $is_enabled;
+}
+
+function is_enabled_legacy_properties(){
+  $options = lr_get_general_options();
+  $is_enabled = is_array($options) && isset($options['enable_legacy']) && $options['enable_legacy'] ? true : false;
+  return $is_enabled;
+}

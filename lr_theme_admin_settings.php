@@ -91,10 +91,51 @@ function lr_initialize_theme_options() {
 		lr_theme_default_general_options() ) );
 	}
 
+  add_settings_section(
+		'menu_settings_section',			// ID used to identify this section and with which to register options
+		__( 'Menu Options', 'tw' ),		// Title to be displayed on the administration page
+		'lr_general_menu_options_callback',	// Callback used to render the description of the section
+		'lr_theme_general_options'		// Page on which to add this section of options
+	);
+
+	add_settings_field(
+		'enable_branded_header',
+		__( 'Enabled Branded Header', 'tw' ),
+		'lr_enable_branded_header_callback',
+		'lr_theme_general_options',
+		'menu_settings_section',
+		array(
+			__( 'Enable the Luxury Retreats branded header.', 'tw' ),
+		)
+	);
+	add_settings_field(
+		'enable_branded_footer',
+		__( 'Enabled Branded Footer', 'tw' ),
+		'lr_enable_branded_footer_callback',
+		'lr_theme_general_options',
+		'menu_settings_section',
+		array(
+			__( 'Enable the Luxury Retreats branded header.', 'tw' ),
+		)
+	);
+
+	add_settings_field(
+		'enable_legacy_properties',
+		__( 'Enabled Legacy Properties', 'tw' ),
+		'lr_enable_legacy_properties_callback',
+		'lr_theme_general_options',
+		'menu_settings_section',
+		array(
+			__( 'Enable the legacy properties system.', 'tw' ),
+		)
+	);
+
+
+
 	add_settings_section(
 		'menu_settings_section',			// ID used to identify this section and with which to register options
 		__( 'Form Options', 'tw' ),		// Title to be displayed on the administration page
-		'lr_general_menu_options_callback',	// Callback used to render the description of the section
+		'lr_general_form_options_callback',	// Callback used to render the description of the section
 		'lr_theme_general_options'		// Page on which to add this section of options
 	);
 
@@ -120,6 +161,36 @@ function lr_initialize_theme_options() {
 } // end tw_initialize_theme_options
 add_action( 'admin_init', 'lr_initialize_theme_options' );
 
+
+function lr_enable_branded_header_callback(){
+  $options = get_option( 'lr_theme_general_options' );
+
+  $html = '<input type="checkbox" id="enable_branded_header" name="lr_theme_general_options[enable_branded_header]" value="1"' . checked( 1, $options['enable_branded_header'], false ) . '/>';
+  $html .= '&nbsp;';
+  $html .= '<label for="enable_branded_header">Enable branded Luxury Retreats Header</label>';
+
+  echo $html;
+}
+
+function lr_enable_branded_footer_callback(){
+  $options = get_option( 'lr_theme_general_options' );
+
+  $html = '<input type="checkbox" id="enable_branded_footer" name="lr_theme_general_options[enable_branded_footer]" value="1"' . checked( 1, $options['enable_branded_footer'], false ) . '/>';
+  $html .= '&nbsp;';
+  $html .= '<label for="enable_branded_footer">Enable branded Luxury Retreats Footer</label>';
+
+  echo $html;
+}
+
+function lr_enable_legacy_properties_callback(){
+  $options = get_option( 'lr_theme_general_options' );
+
+  $html = '<input type="checkbox" id="enable_legacy" name="lr_theme_general_options[enable_legacy]" value="1"' . checked( 1, $options['enable_legacy'], false ) . '/>';
+  $html .= '&nbsp;';
+  $html .= '<label for="enable_legacy">Enable legacy properties</label>';
+
+  echo $html;
+}
 
 if ( is_plugin_active( 'gravityforms/gravityforms.php' ) ) {
   function lr_select_gform_callback($args) {
