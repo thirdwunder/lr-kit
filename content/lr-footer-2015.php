@@ -25,6 +25,7 @@
         $social_info = lr_get_social();
         if($social_info):
           $count = count($social_info);
+          unset($footer_social['rss']);
         ?>
       <div id="footer-social" class="footer-social <?php //echo $footer_social_class;?>">
         <h3 class="hidden-xs hidden-sm visible-md-*"><?php _e("Let's Socialize",'tw'); ?></h3>
