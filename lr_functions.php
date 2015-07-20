@@ -1493,7 +1493,6 @@ function lr_update_region($r_id, $r_name, $r_slug, $r_level, $parent_id=0){
     if($parent_id!==0){
       $parent = get_term_by('id', $parent_id, $taxonomy);
       if(is_wp_error($parent)){
-        error_log($parent->get_error_message());
         $parent=null;
       }
     }
@@ -1512,7 +1511,6 @@ function lr_update_region($r_id, $r_name, $r_slug, $r_level, $parent_id=0){
                   )
                 );
         if(is_wp_error($region)){
-          error_log($region->get_error_message());
         }else{
           $region_term_id = $region['term_id'];
         }
@@ -1571,7 +1569,6 @@ function lr_get_general_options(){
 
 function is_enabled_branded_header(){
   $options = lr_get_general_options();
-  error_log($options['enable_branded_header']);
 
   $is_enabled = is_array($options) && isset($options['enable_branded_header']) && $options['enable_branded_header'] ? true : false;
   return $is_enabled;
