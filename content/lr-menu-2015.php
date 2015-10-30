@@ -34,7 +34,7 @@
 <div id="subMenuWrapper" class="subMenuWrapper modal hidden-xs">
   <div id="vacationIdeaWrapper" class="vacationIdeaWrapper" >
     <div class="container">
-      <h3 class="headerDdTitle ideaTitle"><?php _e('Get Insprired','tw'); ?></h3>
+      <h3 class="headerDdTitle ideaTitle"><?php _e('Get Inspired','tw'); ?></h3>
       <div class="row">
         <div class="hidden-xs col-sm-8 col-md-8 ideaLeft">
           <h4 class="ideaSubtitle"><?php _e('Browse Our Top Villa Collections:','tw');?></h4>
