@@ -1,7 +1,13 @@
 <?php $destinations = lr_get_destinations() ;?>
 <div id="destinationsMenu" class="collapse">
     <div id="destinationsMenuWrapper" class="container">
-        <span class="footerTlt"><?php _e('Our Destinations','tw'); ?><a data-toggle="collapse" href="#destinationsMenu" aria-expanded="false" aria-controls="destinationsMenu" id="hideDestinations" class="hideDestGuide"><?php _e('Hide','tw');?></a></span>
+        <span class="footerTlt">
+        <a data-toggle="collapse" href="#destinationsMenu" aria-expanded="false" aria-controls="destinationsMenu" id="hideDestinations" class="hideDestGuideTitle"><?php _e('Our Destinations','tw'); ?>
+        </a>
+
+        <a data-toggle="collapse" href="#destinationsMenu" aria-expanded="false" aria-controls="destinationsMenu" id="hideDestinations" class="hideDestGuide">
+          <?php _e('Hide','tw');?>
+        </a></span>
         <div id="topDestination" class="clearfix">
           <nav class="">
             <ul class="topDestinationListBlock col-xs-6 col-sm-4 col-md-2">
