@@ -15,7 +15,7 @@ if(!function_exists('tw_slugify')){
 
 if(!function_exists('lr_get_base_url')){
   function lr_get_base_url(){
-    return 'http://www2.luxuryretreats.com/';
+    return 'http://www.luxuryretreats.com/';
   }
 }
 
