@@ -41,7 +41,7 @@
 
           <div class="row">
             <div class="col-sm-4 ideaArea">
-                <a id="headerBeachfrontLink" class="ideaImgLnk" title="Beachfront retreats" href="/destinations?collections=HasBeach<?php if($tracking_code){ echo '&'.$tracking_code; } ?>">
+                <a id="headerBeachfrontLink" class="ideaImgLnk" title="Beachfront retreats" href="<?php echo lr_get_base_url(); ?>/destinations?collections=HasBeach<?php if($tracking_code){ echo '&'.$tracking_code; } ?>">
 
 
                     <div>
@@ -56,7 +56,7 @@
                 </a>
             </div>
             <div class="col-sm-4 ideaArea">
-                <a id="headerGroupsLink" class="ideaImgLnk" title="Group Destinations" href="/destinations?collections=LargeGroups<?php if($tracking_code){ echo '&'.$tracking_code; } ?>">
+                <a id="headerGroupsLink" class="ideaImgLnk" title="Group Destinations" href="<?php echo lr_get_base_url(); ?>/destinations?collections=LargeGroups<?php if($tracking_code){ echo '&'.$tracking_code; } ?>">
 
                     <div>
 
@@ -72,7 +72,7 @@
                 </a>
             </div>
             <div class="col-sm-4 ideaArea">
-                <a id="headerCityLink" class="ideaImgLnk" title="City Retreats" href="/destinations?collections=CityLife<?php if($tracking_code){ echo '&'.$tracking_code; } ?>">
+                <a id="headerCityLink" class="ideaImgLnk" title="City Retreats" href="<?php echo lr_get_base_url(); ?>/destinations?collections=CityLife<?php if($tracking_code){ echo '&'.$tracking_code; } ?>">
 
                     <div>
                         <img class="ideaImg" src="https://resources.luxuryretreats.com/www/images/v5/header_idea_city.jpg" alt="city breaks">
